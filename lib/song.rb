@@ -23,7 +23,7 @@ class Song
   end
 
   def self.artists
-    @@artists.collect.inject([]) {|result, artist| result << artist if !result.include?(artist)}
+    @@artists.each.inject([]) {|result, artist| result << artist if !result.include?(artist)}
   end
 
   def self.genres
