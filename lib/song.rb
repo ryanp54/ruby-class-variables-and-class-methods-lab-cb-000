@@ -27,7 +27,7 @@ class Song
   end
 
   def self.genres
-    @@genres
+    @@genres.inject([]) { |result, genre| !result.include?(genre) ? result << genre : result }
   end
 
   def self.genre_count
