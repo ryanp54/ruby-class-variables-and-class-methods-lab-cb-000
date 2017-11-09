@@ -24,7 +24,7 @@ class Song
 
   def self.artists
     artists = @@artists
-    artists.collect { |artist| artists.delete_if do |other_artist| other_artist == artist } artist }
+    artists.collect { |artist| artists.delete_if { |other_artist| other_artist == artist } artist }
   end
 
   def self.genres
