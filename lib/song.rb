@@ -25,7 +25,6 @@ class Song
   def self.artists
     @@artists.inject([]) do |result, artist|
       puts result
-      result << artist if !result.include?(artist)
     end
   end
 
