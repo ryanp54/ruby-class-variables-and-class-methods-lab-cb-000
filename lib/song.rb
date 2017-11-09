@@ -24,7 +24,6 @@ class Song
 
   def self.artists
     @@artists.inject([]) { |result, artist| !result.include?(artist) ? result << artist : result }
-    end
   end
 
   def self.genres
