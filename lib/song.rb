@@ -23,11 +23,7 @@ class Song
   end
 
   def self.artists
-    artists = @@artists
-    artists.collect do |artist|
-      artists.delete_if { |other_artist| other_artist == artist }
-      artist
-    end
+    @@artists.inject([]) {|result, artist| result << artist if !result.include?(artist)}
   end
 
   def self.genres
